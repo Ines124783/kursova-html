@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+   <header>
+        <div class="logo">
+            <h1>Магазин Ness</h1>
+            <p>Качество и стил за всеки вкус</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="about.html">За нас</a></li>
+                <li class="dropdown">
+                    <a href="#">Категории</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="mens.html">Мъжки дрехи</a></li>
+                        <li><a href="womens.html">Дамски дрехи</a></li>
+                        <li><a href="kids.html">Детски дрехи</a></li>
+                    </ul>
+                </li>
+                <li><a href="sales.html">Намалени артикули</a></li>
+                <li><a href="gallery.html">Галерия</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/gallery.jpg" class="gallery-image" alt="Снимка 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/gallery2.jpg" class="gallery-image" alt="Снимка 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/gallery3.jpg" class="gallery-image" alt="Снимка 3">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/gallery4.jpg" class="gallery-image" alt="Снимка 4">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/photo5.jpg" class="gallery-image" alt="Снимка 5">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/photo6.jpg" class="gallery-image" alt="Снимка 6">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/photo7.jpg" class="gallery-image" alt="Снимка 7">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/photo8.jpg" class="gallery-image" alt="Снимка 8">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Магазин за дрехи. Всички права запазени.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); 
+        }
+        showSlides();
+    </script>
+</body>
+</html>
